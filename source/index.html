@@ -4,10 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Компания «Smart Device»</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/pt-mono-v7-latin_cyrillic-regular.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-v18-latin_cyrillic-700.woff2" as="font">
 </head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+<body class="page">
+
+  <div class="visually-hidden">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
+  <header class="header">
+    <div class="wrapper header__top">
+      <picture>
+        <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+        <img class="header__logo" src="img/logo.svg" width="202" height="52" alt="Логотип сайта">
+      </picture>
+
+      <ul class="header__contacts">
+        <li class="header__contact-item">
+          <a class="header__link" href="mailto:info@sd.ru">
+            <svg class="header__link-icon header__link-icon--envelope" width="19" height="14" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-envelope"></use>
+            </svg>
+            <span class="header__link-text">info@sd.ru</span>
+          </a>
+        </li>
+        <li class="header__contact-item">
+          <a class="header__link" href="tel:+74950005252">
+            <svg class="header__link-icon header__link-icon--phone" width="18" height="18" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+            <span class="header__link-text">+7 (495) 000 52 52</span>
+          </a>
+        </li>
+      </ul>
+
+      <a class="header__btn" href="#" >Заказать звонок</a>
+    </div>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Компания «Smart Device»</h1>
+  </main>
+  <footer></footer>
+  <script src="js/vendor/picturefill.js" async></script>
 </body>
 </html>

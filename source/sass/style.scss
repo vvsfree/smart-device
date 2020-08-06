@@ -1,3 +1,7 @@
-h1 {
-  color: red;
-}
+@import "fonts.scss";
+@import "variables.scss";
+@import "scaffolding.scss";
+
+// blocks
+@import "page.scss";
+@import "header.scss";

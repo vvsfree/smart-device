@@ -1,0 +1,24 @@
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 25px;
+  max-width: 1411px;
+}
+
+@media (max-width: $tablet-width - 1) {
+  .wrapper {
+    padding: 0 15px 0 17px;
+  }
+}

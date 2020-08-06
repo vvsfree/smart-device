@@ -1,0 +1,156 @@
+.header {
+  padding: 33px 0;
+
+  color: $white-color;
+  background-color: $dark-gray-color;
+  background-image: url("../img/bg-header-desktop@1x.png");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-header-desktop@2x.png");
+  }
+}
+
+.header__top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  margin-left: auto;
+
+  padding: 0;
+  list-style: none;
+}
+
+.header__contact-item {
+  & + & {
+    margin-left: 88px;
+  }
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+
+  font-family: $font-mono;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__link-icon {
+  flex-shrink: 0;
+
+  margin-right: 16px;
+
+  width: 18px;
+  height: 18px;
+
+  &--envelope {
+    margin-right: 20px;
+
+    width: 19px;
+    height: 14px;
+  }
+}
+
+.header__btn {
+  margin-left: 48px;
+  padding: 13px 26px;
+
+  font-family: $font-roboto-condensed;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: inherit;
+  text-decoration: none;
+
+  border: 1px solid $white-color;
+  border-radius: 5px;
+}
+
+@media (max-width: $desktop-width - 1) {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    background-image: url("../img/bg-header-tablet@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-header-tablet@2x.png");
+    }
+  }
+
+  .header__top {
+    align-items: flex-start;
+  }
+
+  .header__contacts {
+    padding-top: 12px;
+  }
+
+  .header__contact-item {
+    & + & {
+      margin-left: 33px;
+    }
+  }
+
+  .header__link-icon {
+    margin-right: 0;
+
+    width: 24px;
+    height: 24px;
+
+    &--envelope {
+      width: 26px;
+      height: 19px;
+    }
+  }
+
+  .header__link-text {
+    display: none;
+  }
+
+  .header__btn {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .header {
+    padding-top: 17px;
+    padding-bottom: 15px;
+
+    background-image: url("../img/bg-header-mobile@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-header-mobile@2x.png");
+    }
+  }
+
+  .header__logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .header__contacts {
+    padding-top: 6px;
+  }
+
+  .header__contact-item {
+    & + & {
+      margin-left: 23px;
+    }
+  }
+}
