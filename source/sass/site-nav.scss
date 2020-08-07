@@ -1,0 +1,26 @@
+.site-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-nav__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: 1411px) {
+  .site-nav__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    margin-left: -65px;
+    height: 100px;
+  }
+
+  .site-nav__item {
+    margin-left: 65px;
+  }
+}

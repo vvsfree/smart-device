@@ -1,7 +1,16 @@
 @import "fonts.scss";
 @import "variables.scss";
+@import "mixins.scss";
 @import "scaffolding.scss";
+
+// common blocks
+@import "social-list.scss";
+@import "footer-top.scss";
+@import "site-nav.scss";
+@import "copyright.scss";
 
 // blocks
 @import "page.scss";
 @import "header.scss";
+@import "footer.scss";
+@import "accordion.scss";

@@ -1,0 +1,60 @@
+.accordion__btn {
+  display: none;
+}
+
+.accordion__btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.accordion__use-icon-minus {
+  display: none;
+}
+
+
+@media (max-width: $tablet-width - 1) {
+  .accordion {
+    &--expanded {
+      .accordion__btn-icon {
+        height: 2px;
+      }
+
+      .accordion__content {
+        display: block;
+      }
+
+      .accordion__use-icon-plus {
+        display: none;
+      }
+
+      .accordion__use-icon-minus {
+        display: block;
+      }
+    }
+  }
+
+  .accordion__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    margin: 0;
+    margin-left: 5px;
+
+    padding: 0;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  .accordion__content {
+    display: none;
+  }
+}

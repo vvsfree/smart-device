@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Компания «Smart Device»</title>
+  <title>Компания «SD Service Devices»</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/pt-mono-v7-latin_cyrillic-regular.woff2" as="font">
-  <link rel="preload" href="fonts/roboto-condensed-v18-latin_cyrillic-700.woff2" as="font">
+  <link rel="preload" href="fonts/pt-mono-v7-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v18-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v18-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
 </head>
 <body class="page">
 
@@ -44,10 +45,93 @@
       <a class="header__btn" href="#" >Заказать звонок</a>
     </div>
   </header>
-  <main>
-    <h1 class="visually-hidden">Компания «Smart Device»</h1>
+  <main class="page__main">
+    <h1 class="visually-hidden">Компания «SD Service Devices»</h1>
   </main>
-  <footer></footer>
+  <footer class="footer page__footer">
+    <div class="footer-top footer__top">
+      <div class="wrapper footer-top__layout">
+        <a class="footer-top__logo">
+          <img class="footer-top__logo-img" src="img/logo-footer.svg" width="216" height="52" alt="Логотип сайта">
+        </a>
+        <p class="footer-top__copyright">1999-2018 SD Service Devices</p>
+        <ul class="social-list footer-top__social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="#" aria-label="Фэйсбук">
+              <svg class="social-list__icon social-list__icon--fb" width="27" height="27" role="img">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#" aria-label="Одноклассники">
+              <svg class="social-list__icon social-list__icon--ok" width="27" height="27" role="img">
+                <use xlink:href="#icon-ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#" aria-label="ВКонтакте">
+              <svg class="social-list__icon social-list__icon--vk" width="27" height="27" role="img">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section class="site-nav footer__nav accordion accordion--expanded">
+      <div class="wrapper">
+        <h2 class="footer__title">
+          Разделы сайта
+          <button class="accordion__btn" type="button">
+            <svg class="accordion__btn-icon" width="16" height="16" aria-hidden="true" focusable="false">
+              <use class="accordion__use-icon-plus" xlink:href="#icon-plus"></use>
+              <use class="accordion__use-icon-minus" xlink:href="#icon-minus"></use>
+            </svg>
+          </button>
+        </h2>
+        <ul class="site-nav__list footer__content accordion__content">
+          <li class="site-nav__item"><a class="site-nav__link" href="#">О компании</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#">Продукты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#">Производство печатных плат</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#">Монтаж печатных плат</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#">Комплектующие</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#">Доставка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer__contacts accordion accordion--expanded">
+      <div class="wrapper">
+        <h2 class="footer__title">
+          Наш офис
+          <button class="accordion__btn" type="button">
+            <svg class="accordion__btn-icon" width="16" height="16" aria-hidden="true" focusable="false">
+              <use class="accordion__use-icon-plus" xlink:href="#icon-plus"></use>
+              <use class="accordion__use-icon-minus" xlink:href="#icon-minus"></use>
+            </svg>
+          </button>
+        </h2>
+        <address class="footer__address footer__content accordion__content">
+          г. Мытищи, Олимпийский проспект, д.10<br>
+          +7 (495) 589-40-50<br>
+          +7 (925) 003-87-67<br>
+          +7 (926) 926-080-79
+        </address>
+      </div>
+    </section>
+    <section class="copyright footer__copyright">
+      <h2 class="visually-hidden">Правовая информация</h2>
+      <div class="wrapper copyright__layout">
+        <p class="copyright__statement">Все права защищены</p>
+        <p class="copyright__holder">1999-2018 SD Service Devices</p>
+        <a class="copyright__policy" href="#">Условия конфиденциальности</a>
+        <a class="copyright__developer" href="#">Developed by WOW Studio</a>
+      </div>
+    </section>
+  </footer>
+  <script src="js/script.js" async></script>
   <script src="js/vendor/picturefill.js" async></script>
 </body>
 </html>
