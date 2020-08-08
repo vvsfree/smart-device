@@ -60,11 +60,33 @@
         </li>
       </ul>
 
-      <a class="header__btn" href="#">Заказать звонок</a>
+      <a class="btn btn--bordered header__btn" href="#">Заказать звонок</a>
     </div>
   </header>
   <main class="page__main">
     <h1 class="visually-hidden">Компания «SD Service Devices»</h1>
+    <section class="promo">
+      <div class="wrapper promo__layout">
+        <h2 class="promo__title">Печатные платы</h2>
+        <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a class="btn btn--blue promo__btn" href="#">
+          <span class="promo__btn-text">Получить бесплатную консультацию</span>
+          <span class="promo__btn-text promo__btn-text--alternate">Бесплатная консультация</span>
+        </a>
+        <a class="promo__link" href="#">Скролл вниз</a>
+      </div>
+      <picture>
+        <!-- 1х: 294px; 2x: 588px -->
+        <source media="(max-width: 767px)" srcset="img/promo-mobile@1x.webp 1x, img/promo-mobile@2x.webp 2x" type="image/webp">
+        <source media="(max-width: 767px)" srcset="img/promo-mobile@1x.png 1x, img/promo-mobile@2x.png 2x">
+        <!-- 1х: 260px; 2x: 520px -->
+        <source media="(max-width: 1023px)" srcset="img/promo-tablet@1x.webp 1x, img/promo-tablet@2x.webp 2x" type="image/webp">
+        <source media="(max-width: 1023px)" srcset="img/promo-tablet@1x.png 1x, img/promo-tablet@2x.png 2x">
+        <!-- 1х: 705px; 2x: 1410px -->
+        <source srcset="img/promo-desktop@1x.webp 1x, img/promo-desktop@2x.webp 2x" type="image/webp">
+        <img class="promo__img" src="img/promo-desktop@1x.png" srcset="img/promo-desktop@2x.png 2x" width="705" height="515" alt="Набор печатных плат">
+      </picture>
+    </section>
   </main>
   <footer class="footer page__footer">
     <div class="footer-top footer__top">

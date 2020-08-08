@@ -1,0 +1,23 @@
+.btn {
+  display: block;
+
+  font-family: $font-roboto-condensed;
+  font-weight: bold;
+
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: inherit;
+
+  &--blue {
+    background: $blue-color;
+  }
+
+  border-radius: 5px;
+
+  &--bordered {
+    border: 1px solid $white-color;
+  }
+}
