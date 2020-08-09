@@ -1,0 +1,60 @@
+.about {
+  overflow: hidden;
+
+  padding-top: 55px;
+  padding-bottom: 96px;
+
+  position: relative;
+
+  min-height: 461px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -560px + 196px;
+    left: 0;
+
+    width: 302px;
+    height: 560px;
+
+    background-image: url("../img/bg-triangle-left-big.svg");
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -560px + 66px;
+    left: calc(50% - 125px);
+    width: 488px;
+    height: 560px;
+
+    background-image: url("../img/bg-triangle-right-big.svg");
+  }
+}
+
+@media (max-width: $desktop-width - 1) {
+  .about {
+    padding-top: 27px;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: "";
+      top: -560px + 155px;
+      left: calc(50% + 103px);
+    }
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .about {
+    padding-top: 30px;
+
+    &::after {
+      top: -560px + 143px;
+      left: calc(50% - 3px);
+    }
+  }
+}

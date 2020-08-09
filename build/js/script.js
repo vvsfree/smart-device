@@ -10,4 +10,16 @@
       });
     });
   }
+
+  var anchor = document.querySelector('.promo__link');
+  if (anchor) {
+    var blockID = anchor.getAttribute('href').substr(1);
+    var block = document.getElementById(blockID);
+    if (block) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        block.scrollIntoView({behavior: 'smooth'});
+      });
+    }
+  }
 })();
