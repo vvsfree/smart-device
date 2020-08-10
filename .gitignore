@@ -7,7 +7,6 @@ package-lock.json
 *.pdf
 *.psd
 *.fig
-*.jpg
 *.sublime*
 node_modules/
 npm-debug.*

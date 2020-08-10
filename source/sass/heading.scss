@@ -1,0 +1,24 @@
+.heading {
+  margin: 0;
+
+  font-family: $font-roboto-condensed;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+
+  color: inherit;
+}
+
+@media (max-width: $desktop-width - 1) {
+  .heading {
+    font-size: 32px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .heading {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
