@@ -86,7 +86,7 @@
         </li>
       </ul>
 
-      <a class="btn btn--bordered header__btn" href="#">Заказать звонок</a>
+      <a class="btn btn--white header__btn" href="#">Заказать звонок</a>
     </div>
   </header>
   <main class="page__main">
@@ -95,7 +95,7 @@
       <div class="wrapper promo__layout">
         <h2 class="promo__title">Печатные платы</h2>
         <p class="promo__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="btn btn--blue promo__btn" href="#">
+        <a class="btn btn--blue-bg promo__btn" href="#">
           <span class="promo__btn-text">Получить бесплатную консультацию</span>
           <span class="promo__btn-text promo__btn-text--alternate">Бесплатная консультация</span>
         </a>
@@ -115,7 +115,7 @@
     </section>
     <section class="features" id="features">
       <h2 class="visually-hidden">Наши преимущества</h2>
-      <div class="wrapper">
+      <div class="wrapper wrapper--narrow">
         <ul class="features__list">
           <li class="features__item">
             <div class="features__icon-placeholder">
@@ -162,7 +162,21 @@
       </div>
     </section>
     <section class="about">
-      <h2 class="about__title">О компании</h2>
+      <div class="wrapper wrapper--narrow">
+        <picture>
+          <!-- 1х: 244px; 2x: 488px -->
+          <source media="(max-width: 1023px)" srcset="img/2005-tablet@1x.webp 1x, img/2005-tablet@2x.webp 2x" type="image/webp">
+          <source media="(max-width: 1023px)" srcset="img/2005-tablet@1x.png 1x, img/2005-tablet@2x.png 2x">
+          <!-- 1х: 220px; 2x: 480px -->
+          <source srcset="img/2005-desktop@1x.webp 1x, img/2005-desktop@2x.webp 2x" type="image/webp">
+          <img class="about__img" src="img/2005-desktop@1x.png" srcset="img/2005-desktop@2x.png 2x" width="220" height="320" alt="Значимая для компании цифра 2005">
+        </picture>
+        <h2 class="about__title">О компании</h2>
+        <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+        </p>
+        <p class="about__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
+        <a class="btn btn--blue about__btn" href="#">Подробнее</a>
+      </div>
     </section>
   </main>
   <footer class="footer page__footer">

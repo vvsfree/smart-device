@@ -11,15 +11,36 @@
     });
   }
 
-  var anchor = document.querySelector('.promo__link');
-  if (anchor) {
-    var blockID = anchor.getAttribute('href').substr(1);
-    var block = document.getElementById(blockID);
-    if (block) {
-      anchor.addEventListener('click', function (e) {
+  var anchorElement = document.querySelector('.promo__link');
+  if (anchorElement) {
+    var blockID = anchorElement.getAttribute('href').substr(1);
+    var blockElement = document.getElementById(blockID);
+    if (blockElement) {
+      anchorElement.addEventListener('click', function (e) {
         e.preventDefault();
-        block.scrollIntoView({behavior: 'smooth'});
+        blockElement.scrollIntoView({behavior: 'smooth'});
       });
     }
+  }
+
+  var desktopWidth = 1024;
+  var aboutTextElement = document.querySelector('.about__text:last-of-type');
+  if (aboutTextElement) {
+    var textOriginal = aboutTextElement.textContent;
+    // Реагируем на изменение ширины
+    // Мониторим планшетную и мобильную ширину
+    var mediaDesktop = window.matchMedia('(max-width: ' + (desktopWidth - 1) + 'px)');
+    var handleWidthChange = function (evt) {
+      if (evt.matches) {
+        if (aboutTextElement.textContent.length > 202) {
+          aboutTextElement.textContent = aboutTextElement.textContent.substring(0, 200) + '..';
+        }
+      } else {
+        aboutTextElement.textContent = textOriginal;
+      }
+    };
+
+    mediaDesktop.addListener(handleWidthChange);
+    handleWidthChange(mediaDesktop);
   }
 })();

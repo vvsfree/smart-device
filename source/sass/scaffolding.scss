@@ -15,6 +15,14 @@
   margin: 0 auto;
   padding: 0 25px;
   max-width: 1411px;
+
+  &--narrow {
+    @media (min-width: $desktop-width) {
+      padding-left: 25px + 122px;
+      padding-right: 25px  + 119px;
+      max-width: 1411px - 122px - 119px;
+    }
+  }
 }
 
 @media (max-width: $tablet-width - 1) {
