@@ -1,0 +1,61 @@
+.cta {
+  padding-top: 96px;
+  padding-bottom: 114px;
+
+  font-family: $font-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white-color;
+
+  background-color: $blue-color;
+  background-image: url("../img/bg-triangles.svg"), url("../img/bg-triangles-left-right.svg");
+  background-position: top -60px right calc(50% + 115px + 335px), top 35px right -100px;
+  background-size: 670px 641px, 510px 669px;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.cta__layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cta__picture {
+  margin-top: 62px;
+  transform: translateX(-25px);
+}
+
+.cta__img {
+  width: 100%;
+  height: auto;
+}
+
+.cta__form {
+  flex-shrink: 0;
+  width: 585px;
+}
+
+@media (max-width: $desktop-width - 1) {
+  .cta {
+    padding-top: 83px;
+    padding-bottom: 103px;
+
+    background-image: none;
+  }
+
+  .cta__picture {
+    display: none;
+  }
+
+  .cta__form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: $tablet-width - 1) {
+  .cta {
+    padding-top: 33px;
+    padding-bottom: 41px;
+  }
+}

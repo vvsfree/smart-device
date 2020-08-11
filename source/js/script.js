@@ -1,5 +1,9 @@
 'use strict';
 (function () {
+  /*
+    Блок "Подвал сайта"
+    Секции "Разделы сайта" и "Наш офис" должны скрываться на мобильной ширине
+  */
   var accordionNodeList = document.querySelectorAll('.accordion');
   if (accordionNodeList) {
     var accordionArray = Array.prototype.slice.call(accordionNodeList);
@@ -11,6 +15,9 @@
     });
   }
 
+  /*
+    Плавный скроллинг к блоку "Преимущества"
+  */
   var anchorElement = document.querySelector('.promo__link');
   if (anchorElement) {
     var blockID = anchorElement.getAttribute('href').substr(1);
@@ -23,6 +30,23 @@
     }
   }
 
+  /*
+    Плавный скроллинг к блоку "Форма"
+  */
+  var buttonElement = document.querySelector('.promo__btn');
+  var formElement = document.querySelector('.form');
+  if (buttonElement && formElement) {
+    buttonElement.addEventListener('click', function (e) {
+      e.preventDefault();
+      formElement.scrollIntoView({behavior: 'smooth'});
+    });
+  }
+
+  /*
+    Блок "О компании". Последний абзац текста
+    На ширинах меньших десктопной нужно добавлять две точки, если длина текста больше 200
+    В ТЗ этого нет, но на макете это видно
+  */
   var desktopWidth = 1024;
   var aboutTextElement = document.querySelector('.about__text:last-of-type');
   if (aboutTextElement) {
