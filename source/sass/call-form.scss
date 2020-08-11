@@ -1,0 +1,30 @@
+.call-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.call-form__heading {
+  margin-bottom: 18px;
+}
+
+.call-form__text {
+  margin-bottom: 30px;
+}
+
+.call-form__label {
+  margin-bottom: 30px;
+}
+
+.call-form__input {
+  padding: 15px 24px;
+}
+
+.call-form__area {
+  min-height: 104px;
+}
+
+.call-form__send-btn {
+  margin-bottom: 34px;
+}

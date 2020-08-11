@@ -1,0 +1,42 @@
+.modal {
+  position: fixed;
+  top: 136px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  display: none;
+
+  padding: 33px 39px 36px;
+
+  width: 490px;
+
+  font-family: $font-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white-color;
+
+  background: $blue-color;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  width: 17px;
+  height: 17px;
+
+  background-color: transparent;
+  border: none;
+
+  appearance: none;
+  cursor: pointer;
+}

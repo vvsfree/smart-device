@@ -187,22 +187,22 @@
               height="288" alt="Набор печатных плат">
           </picture>
         </div>
-        <form class="form cta__form" action="https://echo.htmlacademy.ru" method="POST">
-          <b class="heading form__heading">Остались вопросы? Задайте их нам!</b>
-          <p class="form__text">Мы проконсультируем Вас бесплатно</p>
-          <label class="form__label form__layout-column">
-            <input class="form__input" type="text" placeholder="Имя" name="name">
+        <form class="form cta-form cta__form" action="https://echo.htmlacademy.ru" method="POST">
+          <b class="heading cta-form__heading">Остались вопросы? Задайте их нам!</b>
+          <p class="form__text cta-form__text">Мы проконсультируем Вас бесплатно</p>
+          <label class="cta-form__label cta-form__layout-column">
+            <input class="form__input cta-form__input" type="text" placeholder="Имя" name="customer">
           </label>
-          <label class="form__label form__layout-column">
-            <input class="form__input" type="tel" placeholder="Телефон" name="phone">
+          <label class="cta-form__label cta-form__layout-column">
+            <input class="form__input cta-form__input" type="tel" placeholder="Телефон" name="phone">
           </label>
-          <label class="form__label form__label--area">
-            <textarea class="form__input form__area" name="question" placeholder="Ваш вопрос"></textarea>
+          <label class="cta-form__label cta-form__label--area">
+            <textarea class="form__input form__area cta-form__input cta-form__area" name="question" placeholder="Ваш вопрос"></textarea>
           </label>
 
-          <button class="btn btn--white form__layout-column" type="submit">Задать вопрос</button>
+          <button class="btn btn--white cta-form__layout-column" type="submit">Задать вопрос</button>
 
-          <label class="form__label form__label--checkbox form__layout-column">
+          <label class="form__label form__label--checkbox cta-form__layout-column">
             <input class="form__checkbox visually-hidden" type="checkbox" name="agreement" checked>
             <span class="form__box">
               <svg class="form__icon" width="9" height="6" aria-hidden="true" focusable="false">
@@ -298,6 +298,39 @@
       </div>
     </section>
   </footer>
+  <div class="modal">
+    <form class="form call-form" action="https://echo.htmlacademy.ru" method="POST" name="call">
+      <b class="heading call-form__heading">Закажите звонок</b>
+      <p class="form__text call-form__text">Оставьте контакты, мы проконсультируем Вас бесплатно в удобное время</p>
+      <label class="form__label call-form__label">
+        <input class="form__input call-form__input" type="text" placeholder="Имя" name="customer">
+      </label>
+      <label class="form__label call-form__label">
+        <input class="form__input call-form__input" type="tel" placeholder="Телефон" name="phone">
+      </label>
+      <label class="form__label call-form__label">
+        <textarea class="form__input form__area call-form__input call-form__area" placeholder="Ваш вопрос" name="question"></textarea>
+      </label>
+
+      <button class="btn btn--white call-form__send-btn" type="submit">Отправить</button>
+
+      <label class="form__label form__label--checkbox">
+        <input class="form__checkbox visually-hidden" type="checkbox" name="agreement" checked>
+        <span class="form__box">
+          <svg class="form__icon" width="9" height="6" aria-hidden="true" focusable="false">
+            <use xlink:href="#icon-tick"></use>
+          </svg>
+        </span>
+        Я согласен на обработку персональных данных
+      </label>
+    </form>
+    <button class="modal__close-btn" type="button" aria-label="Закрыть окно">
+      <svg class="modal__close-icon" width="17" height="17" aria-hidden="true" focusable="false">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="overlay"></div>
   <script src="js/script.js" async></script>
   <script src="js/vendor/picturefill.js" async></script>
   <script src="js/vendor/smoothscroll.min.js" async></script>
