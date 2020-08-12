@@ -14,6 +14,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    transform: translateX(-2px);
+  }
 }
 
 .header__logo {
@@ -91,7 +95,7 @@
 
   .header__contact-item {
     & + & {
-      margin-left: 33px;
+      margin-left: 31px;
     }
   }
 
@@ -139,7 +143,7 @@
 
   .header__contact-item {
     & + & {
-      margin-left: 23px;
+      margin-left: 22px;
     }
   }
 }

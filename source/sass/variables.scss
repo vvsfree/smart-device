@@ -13,6 +13,14 @@ $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
-$right-triangle-vshift-tablet: 155px;
+$triangle-left-vshift-desktop: 366px;
+$triangle-right-hshift-desktop: 129px;
+$triangle-right-vshift-desktop: 68px;
+
+$triangle-right-hshift-tablet: 98px;
+$triangle-right-vshift-tablet: 155px;
+
+$triangle-right-hshift-mobile: 8px;
+$triangle-right-vshift-mobile: 143px;
 
 $retina-dppx: 1.5dppx;

@@ -7,6 +7,11 @@
   line-height: 51px;
 
   color: inherit;
+
+  &--small {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 @media (max-width: $desktop-width - 1) {

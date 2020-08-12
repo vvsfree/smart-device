@@ -13,7 +13,9 @@
 
 .wrapper {
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 0;
+  padding-left: 25px;
+  padding-right: 25px;
   max-width: 1411px;
 
   &--narrow {
@@ -27,7 +29,7 @@
 
 @media (max-width: $tablet-width - 1) {
   .wrapper {
-    padding: 0 15px 0 17px;
+    padding: 0 16px 0 16px;
   }
 }
 

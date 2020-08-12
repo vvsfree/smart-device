@@ -13,14 +13,14 @@
   background-color: $white-color;
 
   background-image: url("../img/bg-triangle-left.svg"), url("../img/bg-triangle-right.svg");
-  background-position: top 45px right calc(50% + 112px + 534px), bottom 82px right calc(50% - 112px - 704px);
+  background-position: top 45px right calc(50% + 112px + 534px), bottom 73px right calc(50% - 112px - 708px);
   background-size: 224px 259px, 224px 259px;
   background-repeat: no-repeat, no-repeat;
 
   &::before {
     content: "";
     position: absolute;
-    bottom: -196px;
+    bottom: -$triangle-left-vshift-desktop;
     left: 0;
 
     width: 302px;
@@ -32,12 +32,18 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -66px;
-    left: calc(50% - 125px);
+    bottom: -$triangle-right-vshift-desktop;
+    left: calc(50% - #{$triangle-right-hshift-desktop});
     width: 488px;
     height: 560px;
 
     background-image: url("../img/bg-triangle-right-big.svg");
+  }
+}
+
+.features__wrapper {
+  @media (min-width: $desktop-width) {
+    transform: translateX(-2px);
   }
 }
 
@@ -61,16 +67,18 @@
 .features__item {
   margin-bottom: 30px;
   padding-top: 35px;
-  padding-bottom: 49px;
-  padding-left: 45px;
+  padding-bottom: 50px;
+  padding-left: 42px;
   padding-right: 42px;
 
   width: calc(50% - 15px);
+  min-height: 299px;
+
   box-sizing: border-box;
 
   background-color: $white-color;
   border: 1px solid $dim-gray-color;
-  box-shadow: 3px 0 0 0 $blue-color inset;
+  border-left: 3px solid $blue-color;
 
   &:hover {
     color: $white-color;
@@ -92,7 +100,7 @@
   justify-content: flex-start;
   align-items: flex-end;
 
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 
   width: 40px;
   height: 40px;
@@ -143,22 +151,24 @@
     }
 
     &::after {
-      bottom: -155px;
-      left: calc(50% + 103px);
+      bottom: -$triangle-right-vshift-tablet;
+      left: calc(50% + #{$triangle-right-hshift-tablet});
     }
   }
 
   .features__item {
     padding-top: 20px;
-    padding-bottom: 26px;
+    padding-bottom: 20px;
     padding-left: 26px;
     padding-right: 19px;
 
-    box-shadow: 2px 0 0 0 $blue-color inset;
+    min-height: 232px;
+
+    border-left: 2px solid $blue-color;
   }
 
   .features__icon-placeholder {
-    margin-bottom: 14px;
+    margin-bottom: 6px;
   }
 
   .features__icon {
@@ -177,7 +187,7 @@
   }
 
   .features__item-title {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
 }
 
@@ -187,28 +197,53 @@
     padding-bottom: 30px;
 
     &::after {
-      bottom: -143px;
-      left: calc(50% - 3px);
+      bottom: -$triangle-right-vshift-mobile;
+      left: calc(50% - #{$triangle-right-hshift-mobile});
     }
   }
 
   .features__list {
-    margin-bottom: -20px;
+    margin-bottom: -21px;
   }
 
   .features__item {
-    margin-bottom: 20px;
-    padding-bottom: 26px;
-    padding-left: 18px;
-    padding-right: 19px;
+    margin-bottom: 21px;
+    padding-bottom: 22px;
+    padding-left: 25px;
+    padding-right: 16px;
 
     width: 100%;
+    min-height: auto;
 
+    border-left: none;
     box-shadow: -2px 0 0 0 $blue-color;
+
+    &--hired {
+      padding-right: 10px;
+    }
+
+    &--detective {
+      padding-top: 13px;
+      padding-bottom: 52px;
+
+      .features__item-title {
+        margin-bottom: -9px;
+      }
+    }
+
+    &--tag {
+      padding-top: 17px;
+      padding-bottom: 26px;
+      transform: translateX(1px);
+    }
+  }
+
+  .features__icon-placeholder {
+    margin-bottom: 11px;
   }
 
   .features__item-title {
-    margin-bottom: 17px;
+    margin-bottom: 10px;
 
     font-size: 20px;
     line-height: 28px;

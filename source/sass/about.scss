@@ -2,8 +2,8 @@
   position: relative;
   overflow: hidden;
 
-  padding-top: 55px;
-  padding-bottom: 96px;
+  padding-top: 52px;
+  padding-bottom: 98px;
 
   font-family: $font-mono;
   font-size: 16px;
@@ -13,7 +13,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: -560px + 196px;
+    top: -560px + $triangle-left-vshift-desktop;
     left: 0;
 
     width: 302px;
@@ -25,8 +25,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: -560px + 66px;
-    left: calc(50% - 125px);
+    top: -560px + $triangle-right-vshift-desktop;
+    left: calc(50% - #{$triangle-right-hshift-desktop});
     width: 488px;
     height: 560px;
 
@@ -36,24 +36,25 @@
 
 .about__img {
   float: left;
-  transform: translateX(-25px);
+  transform: translate(-32px, 5px);
 
-  margin-right: -37px;
+  margin-right: -42px;
 
   width: 220px;
   height: 320px;
 }
 
 .about__title {
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .about__text {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 20px;
+  padding-right: 10px;
 
   &:last-of-type {
-    margin-bottom: 34px;
+    margin-bottom: 38px;
   }
 }
 
@@ -65,8 +66,8 @@
 
 @media (max-width: $desktop-width - 1) {
   .about {
-    padding-top: 27px;
-    padding-bottom: 75px;
+    padding-top: 29px;
+    padding-bottom: 73px;
 
     &::before {
       content: none;
@@ -74,13 +75,14 @@
 
     &::after {
       content: "";
-      top: -560px + 155px;
-      left: calc(50% + 103px);
+      top: -560px + $triangle-right-vshift-tablet;
+      left: calc(50% + #{$triangle-right-hshift-tablet});
     }
   }
 
   .about__img {
-    margin-right: -55px;
+    margin-right: -57px;
+    transform: translate(-25px, -2px);
 
     width: 244px;
     height: 362px;
@@ -89,16 +91,24 @@
   .about__title {
     margin-bottom: 24px;
   }
+
+  .about__text {
+    padding-right: 0;
+
+    &:last-of-type {
+      margin-bottom: 42px;
+    }
+  }
 }
 
 @media (max-width: $tablet-width - 1) {
   .about {
-    padding-top: 30px;
+    padding-top: 27px;
     padding-bottom: 65px;
 
     &::after {
-      top: -560px + 143px;
-      left: calc(50% - 3px);
+      top: -560px + $triangle-right-vshift-mobile;
+      left: calc(50% - #{$triangle-right-hshift-mobile});
     }
   }
 
@@ -108,10 +118,12 @@
 
   .about__title {
     margin-bottom: 19px;
+
+    transform: translateX(-2px);
   }
 
   .about__text {
-    margin-bottom: 45px;
+    margin-bottom: 41px;
 
     &:last-of-type {
       margin-bottom: 28px;

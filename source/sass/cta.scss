@@ -1,6 +1,6 @@
 .cta {
-  padding-top: 96px;
-  padding-bottom: 114px;
+  padding-top: 91px;
+  padding-bottom: 106px;
 
   font-family: $font-mono;
   font-size: 16px;
@@ -9,7 +9,7 @@
 
   background-color: $blue-color;
   background-image: url("../img/bg-triangles.svg"), url("../img/bg-triangles-left-right.svg");
-  background-position: top -60px right calc(50% + 115px + 335px), top 35px right -100px;
+  background-position: top -60px right calc(50% + 115px + 334px), top 35px right -73px;
   background-size: 670px 641px, 510px 669px;
   background-repeat: no-repeat, no-repeat;
 }
@@ -21,8 +21,8 @@
 }
 
 .cta__picture {
-  margin-top: 62px;
-  transform: translateX(-25px);
+  margin-top: 70px;
+  transform: translateX(-26px);
 }
 
 .cta__img {
@@ -33,12 +33,13 @@
 .cta__form {
   flex-shrink: 0;
   width: 585px;
+  box-sizing: border-box;
 }
 
 @media (max-width: $desktop-width - 1) {
   .cta {
-    padding-top: 83px;
-    padding-bottom: 103px;
+    padding-top: 80px;
+    padding-bottom: 104px;
 
     background-image: none;
   }
@@ -55,7 +56,7 @@
 
 @media (max-width: $tablet-width - 1) {
   .cta {
-    padding-top: 33px;
+    padding-top: 29px;
     padding-bottom: 41px;
   }
 }

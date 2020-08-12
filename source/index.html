@@ -78,7 +78,7 @@
     </section>
     <section class="features" id="features">
       <h2 class="visually-hidden">Наши преимущества</h2>
-      <div class="wrapper wrapper--narrow">
+      <div class="wrapper wrapper--narrow features__wrapper">
         <ul class="features__list">
           <li class="features__item">
             <div class="features__icon-placeholder">
@@ -91,7 +91,7 @@
             <p class="features__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость,
               производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item--hired">
             <div class="features__icon-placeholder">
               <svg class="features__icon" width="35" height="35" aria-hidden="true" focusable="false">
                 <use xlink:href="#icon-hired"></use>
@@ -102,7 +102,7 @@
               HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
             </p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item--detective">
             <div class="features__icon-placeholder">
               <svg class="features__icon features__icon--detective" width="36" height="31" aria-hidden="true"
                 focusable="false">
@@ -113,7 +113,7 @@
             <p class="features__text">По желанию клиента мы обеспечиваем полную конфеденциальность.
             </p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item--tag">
             <div class="features__icon-placeholder">
               <svg class="features__icon" width="35" height="35" aria-hidden="true" focusable="false">
                 <use xlink:href="#icon-tag"></use>
@@ -200,9 +200,9 @@
             <textarea class="form__input form__area cta-form__input cta-form__area" name="question" placeholder="Ваш вопрос"></textarea>
           </label>
 
-          <button class="btn btn--white cta-form__layout-column" type="submit">Задать вопрос</button>
+          <button class="btn btn--white cta-form__btn cta-form__layout-column" type="submit">Задать вопрос</button>
 
-          <label class="form__label form__label--checkbox cta-form__layout-column">
+          <label class="form__label form__label--checkbox cta-form__checkbox cta-form__layout-column">
             <input class="form__checkbox visually-hidden" type="checkbox" name="agreement" checked>
             <span class="form__box">
               <svg class="form__icon" width="9" height="6" aria-hidden="true" focusable="false">
@@ -300,8 +300,8 @@
   </footer>
   <div class="modal">
     <form class="form call-form" action="https://echo.htmlacademy.ru" method="POST" name="call">
-      <b class="heading call-form__heading">Закажите звонок</b>
-      <p class="form__text call-form__text">Оставьте контакты, мы проконсультируем Вас бесплатно в удобное время</p>
+      <b class="heading heading--small call-form__heading">Закажите звонок</b>
+      <p class="form__text call-form__text">Оставьте контакты, мы проконсультируем<br>вас бесплатно в удобное время</p>
       <label class="form__label call-form__label">
         <input class="form__input call-form__input" type="text" placeholder="Имя" name="customer">
       </label>

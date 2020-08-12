@@ -1,5 +1,5 @@
 .goods {
-  padding-top: 93px;
+  padding-top: 88px;
   padding-bottom: 127px;
 
   color: $white-color;
@@ -8,7 +8,7 @@
 }
 
 .goods__title {
-  padding-bottom: 47px;
+  margin-bottom: 52px;
 }
 
 .goods__list {
@@ -29,7 +29,7 @@
   position: relative;
 
   display: block;
-  padding: 53px 44px 63px;
+  padding: 50px 42px 63px;
 
   min-height: 620px;
   box-sizing: border-box;
@@ -91,7 +91,8 @@
   right: 0;
 
   // Чтобы получить синий квадрат размерами 63 на 63
-  padding: 27px 30px;
+  padding: 27px;
+  padding-left: 30px;
 
   width: 6px;
   height: 9px;
@@ -102,12 +103,13 @@
 
 @media (max-width: $desktop-width - 1) {
   .goods {
-    padding-top: 53px;
+    padding-top: 50px;
     padding-bottom: 78px;
   }
 
   .goods__title {
-    padding-bottom: 46px;
+    margin-bottom: 49px;
+    width: 85%;
   }
 
   .goods__list {
@@ -124,7 +126,7 @@
   }
 
   .goods__link {
-    padding-top: 43px;
+    padding-top: 39px;
     min-height: 256px;
 
     &::before {
@@ -152,6 +154,9 @@
     }
 
     &--parts {
+      padding-top: 50px;
+      padding-left: 46px;
+
       &::before {
         background-image: url("../img/bg-parts-tablet@1x.jpg");
 
@@ -165,11 +170,15 @@
 
 @media (max-width: $tablet-width - 1) {
   .goods {
+    padding-top: 49px;
     padding-bottom: 64px;
   }
 
   .goods__title {
-    padding-bottom: 37px;
+    margin-bottom: 40px;
+    width: 100%;
+
+    transform: translateX(8px);
   }
 
   .goods__item {
@@ -179,7 +188,7 @@
   }
 
   .goods__link {
-    padding: 23px 35px 63px;
+    padding: 20px 34px 63px;
 
     &--prod {
       &::before {
@@ -202,6 +211,9 @@
     }
 
     &--parts {
+      padding-top: 30px;
+      padding-left: 35px;
+
       &::before {
         background-image: url("../img/bg-parts-mobile@1x.jpg");
 

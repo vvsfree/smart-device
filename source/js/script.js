@@ -90,6 +90,8 @@
     callForm.phone.value = getItem('phone');
     callForm.question.value = getItem('question');
     callForm.agreement.checked = getItem('agreement');
+
+    phonePrevValue = callForm.phone.value;
   }
 
   function closeModal() {
@@ -113,6 +115,8 @@
   var callForm = document.forms.call;
 
   var callButton = document.querySelector('.header__btn');
+
+  var phonePrevValue = callForm.phone.value;
 
   if (overlay && modal && callButton) {
     overlay.addEventListener('click', function () {
@@ -139,5 +143,29 @@
       openModal();
     });
   }
+
+  callForm.phone.addEventListener('input', function (evt) {
+    var check;
+    var value = evt.target.value;
+    if (value) {
+      check = /\+7\(.*/.test(value);
+      if (check) {
+        phonePrevValue = value;
+      } else {
+        callForm.phone.value = phonePrevValue;
+      }
+
+      console.log(evt.target.value);
+    }
+
+    // var check = /\+7.*/.test(evt.data);
+    // var check = /\d/.test(evt.data);
+    // if (check) {
+    //   phonePrevValue = callForm.phone.value;
+    // } else {
+    //   callForm.phone.value = phonePrevValue;
+    // }
+    // console.log(navigator.userAgent, evt);
+  });
 
 })();
