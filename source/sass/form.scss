@@ -45,6 +45,10 @@
     color: $white-color;
     opacity: 1;
   }
+
+  &:invalid {
+    box-shadow: 0 0 0 3px red;
+  }
 }
 
 .form__area {

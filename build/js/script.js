@@ -91,7 +91,7 @@
     callForm.question.value = getItem('question');
     callForm.agreement.checked = getItem('agreement');
 
-    phonePrevValue = callForm.phone.value;
+    origValue = callForm.phone.value;
   }
 
   function closeModal() {
@@ -116,7 +116,7 @@
 
   var callButton = document.querySelector('.header__btn');
 
-  var phonePrevValue = callForm.phone.value;
+  var origValue;
 
   if (overlay && modal && callButton) {
     overlay.addEventListener('click', function () {
@@ -128,6 +128,13 @@
     });
 
     modal.querySelector('.call-form__send-btn').addEventListener('click', function (evt) {
+      callForm.phone.setCustomValidity('');
+
+      if (/^\+7\(\d{3}\)\d{7}$/.test(callForm.phone.value) === false) {
+        callForm.phone.setCustomValidity('Phone format mask is +7(123)1234567');
+        return;
+      }
+
       evt.preventDefault();
 
       localStorage.setItem('customer', callForm.customer.value);
@@ -144,28 +151,30 @@
     });
   }
 
-  callForm.phone.addEventListener('input', function (evt) {
-    var check;
-    var value = evt.target.value;
-    if (value) {
-      check = /\+7\(.*/.test(value);
-      if (check) {
-        phonePrevValue = value;
-      } else {
-        callForm.phone.value = phonePrevValue;
-      }
-
-      console.log(evt.target.value);
+  callForm.phone.addEventListener('focus', function (evt) {
+    // Если поле пустое, добавим начало номера
+    if (!evt.target.value) {
+      evt.target.value = '+7(';
+      origValue = evt.target.value;
     }
-
-    // var check = /\+7.*/.test(evt.data);
-    // var check = /\d/.test(evt.data);
-    // if (check) {
-    //   phonePrevValue = callForm.phone.value;
-    // } else {
-    //   callForm.phone.value = phonePrevValue;
-    // }
-    // console.log(navigator.userAgent, evt);
   });
 
+  callForm.phone.addEventListener('input', function (evt) {
+    callForm.phone.setCustomValidity('');
+    var value = evt.target.value;
+
+    // Нужно закрыть скобку?
+    var check = /^\+7\(\d{3}$/.test(value);
+    if (check) {
+      evt.target.value = value + ')';
+    }
+
+    // То что в поле ввода может быть частью телефона?
+    check = /^\+7\(\d{0,3}(\)\d{0,7})?$/.test(value);
+    if (check) {
+      origValue = evt.target.value;
+    } else {
+      evt.target.value = origValue;
+    }
+  });
 })();
