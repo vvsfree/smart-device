@@ -820,6 +820,7 @@
 
 .about__btn {
   display: inline-block;
+  vertical-align: middle;
   min-width: 180px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
