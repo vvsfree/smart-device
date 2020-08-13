@@ -25,13 +25,29 @@
   &::after {
     content: "";
     position: absolute;
-    top: -560px + $triangle-right-vshift-desktop;
-    left: calc(50% - #{$triangle-right-hshift-desktop});
+    top: -560px + $triangle_right_vshift_desktop;
+    left: calc(50% - #{$triangle_right_hshift_desktop});
 
     width: 488px;
     height: 560px;
 
     background-image: url("../img/bg-triangle-right-big.svg");
+  }
+
+  h2 {
+    @include heading();
+
+    margin-bottom: 22px;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 20px;
+    padding-right: 10px;
+
+    &:last-of-type {
+      margin-bottom: 38px;
+    }
   }
 }
 
@@ -56,20 +72,6 @@
   }
 }
 
-.about__title {
-  margin-bottom: 22px;
-}
-
-.about__text {
-  margin: 0;
-  margin-bottom: 20px;
-  padding-right: 10px;
-
-  &:last-of-type {
-    margin-bottom: 38px;
-  }
-}
-
 .about__btn {
   display: inline-block;
   vertical-align: middle;
@@ -88,8 +90,22 @@
     }
 
     &::after {
-      top: -560px + $triangle-right-vshift-tablet;
-      left: calc(50% + #{$triangle-right-hshift-tablet});
+      top: -560px + $triangle_right_vshift_tablet;
+      left: calc(50% + #{$triangle_right_hshift_tablet});
+    }
+
+    h2 {
+      @include headingTablet();
+
+      margin-bottom: 24px;
+    }
+
+    p {
+      padding-right: 0;
+
+      &:last-of-type {
+        margin-bottom: 42px;
+      }
     }
   }
 
@@ -109,18 +125,6 @@
       }
     }
   }
-
-  .about__title {
-    margin-bottom: 24px;
-  }
-
-  .about__text {
-    padding-right: 0;
-
-    &:last-of-type {
-      margin-bottom: 42px;
-    }
-  }
 }
 
 @media (max-width: $tablet-width - 1) {
@@ -129,26 +133,23 @@
     padding-bottom: 65px;
 
     &::after {
-      top: -560px + $triangle-right-vshift-mobile;
-      left: calc(50% - #{$triangle-right-hshift-mobile});
+      top: -560px + $triangle_right_vshift_mobile;
+      left: calc(50% - #{$triangle_right_hshift_mobile});
     }
-  }
 
-  .about__img {
-    display: none;
-  }
+    h2 {
+      @include headingMobile();
 
-  .about__title {
-    margin-bottom: 19px;
+      margin-bottom: 19px;
+      transform: translateX(-2px);
+    }
 
-    transform: translateX(-2px);
-  }
+    p {
+      margin-bottom: 41px;
 
-  .about__text {
-    margin-bottom: 41px;
-
-    &:last-of-type {
-      margin-bottom: 28px;
+      &:last-of-type {
+        margin-bottom: 28px;
+      }
     }
   }
 }

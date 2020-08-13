@@ -1,12 +1,5 @@
 .heading {
-  margin: 0;
-
-  font-family: $font-roboto-condensed;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 51px;
-
-  color: inherit;
+  @include heading();
 
   &--small {
     font-size: 28px;
@@ -16,14 +9,12 @@
 
 @media (max-width: $desktop-width - 1) {
   .heading {
-    font-size: 32px;
-    line-height: 45px;
+    @include headingTablet();
   }
 }
 
 @media (max-width: $tablet-width - 1) {
   .heading {
-    font-size: 28px;
-    line-height: 40px;
+    @include headingMobile();
   }
 }

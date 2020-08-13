@@ -2,7 +2,6 @@
   position: relative;
   overflow: hidden;
 
-  position: relative;
   padding-top: 110px;
   padding-bottom: 55px;
 
@@ -33,8 +32,8 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -$triangle-right-vshift-desktop;
-    left: calc(50% - #{$triangle-right-hshift-desktop});
+    bottom: -$triangle_right_vshift_desktop;
+    left: calc(50% - #{$triangle_right_hshift_desktop});
 
     width: 488px;
     height: 560px;
@@ -157,8 +156,8 @@
     }
 
     &::after {
-      bottom: -$triangle-right-vshift-tablet;
-      left: calc(50% + #{$triangle-right-hshift-tablet});
+      bottom: -$triangle_right_vshift_tablet;
+      left: calc(50% + #{$triangle_right_hshift_tablet});
     }
   }
 
@@ -207,8 +206,8 @@
     padding-bottom: 30px;
 
     &::after {
-      bottom: -$triangle-right-vshift-mobile;
-      left: calc(50% - #{$triangle-right-hshift-mobile});
+      bottom: -$triangle_right_vshift_mobile;
+      left: calc(50% - #{$triangle_right_hshift_mobile});
     }
   }
 

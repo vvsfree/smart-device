@@ -3,6 +3,15 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+
+  input,
+  textarea {
+    padding: 15px 24px;
+  }
+
+  textarea {
+    min-height: 104px;
+  }
 }
 
 .call-form__heading {
@@ -15,14 +24,6 @@
 
 .call-form__label {
   margin-bottom: 30px;
-}
-
-.call-form__input {
-  padding: 15px 24px;
-}
-
-.call-form__area {
-  min-height: 104px;
 }
 
 .call-form__send-btn {

@@ -1,7 +1,41 @@
+@mixin visuallyHidden() {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 @mixin copyrightText() {
   margin: 0;
   font-size: 13px;
   line-height: 24px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+@mixin heading() {
+  margin: 0;
+
+  font-family: $font-roboto-condensed;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+
+  color: inherit;
+}
+
+@mixin headingTablet() {
+  font-size: 32px;
+  line-height: 45px;
+}
+
+@mixin headingMobile() {
+  font-size: 28px;
+  line-height: 40px;
 }

@@ -18,43 +18,57 @@
     font-size: 14px;
     line-height: 16px;
   }
-}
 
-.form__input {
-  display: block;
+  input,
+  textarea {
+    display: block;
 
-  margin: 0;
+    margin: 0;
 
-  width: 100%;
-  box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
 
-  font-family: $font-mono;
-  font-size: 16px;
-  line-height: 22px;
+    font-family: $font-mono;
+    font-size: 16px;
+    line-height: 22px;
 
-  color: inherit;
+    color: inherit;
 
-  background-color: rgba($white-color, 0.1);
-  border: none;
+    background-color: rgba($white-color, 0.1);
+    border: none;
 
-  &::placeholder {
-    color: $white-color;
+    &::placeholder {
+      color: $white-color;
+    }
+
+    &:-ms-input-placeholder {
+      color: $white-color;
+      opacity: 1;
+    }
+
+    &:invalid {
+      box-shadow: 0 0 0 3px red;
+    }
   }
 
-  &:-ms-input-placeholder {
-    color: $white-color;
-    opacity: 1;
+  textarea {
+    resize: vertical;
+    // for ie11 (убрать вертикальный скролл)
+    overflow: auto;
   }
 
-  &:invalid {
-    box-shadow: 0 0 0 3px red;
+  input[type="checkbox"] {
+    @include visuallyHidden();
   }
-}
 
-.form__area {
-  resize: vertical;
-  // for ie11 (убрать вертикальный скролл)
-  overflow: auto;
+  input[type="checkbox"]:not(:checked) + .form__box > .form__icon {
+    display: none;
+  }
+
+  input[type="checkbox"]:focus + .form__box {
+    outline: 1px dashed black;
+    outline-offset: 3px;
+  }
 }
 
 .form__box {
@@ -76,13 +90,4 @@
   width: 9px;
   height: 6px;
   fill: $blue-color;
-}
-
-.form__checkbox:not(:checked) + .form__box > .form__icon {
-  display: none;
-}
-
-.form__checkbox:focus + .form__box {
-  outline: 1px dashed black;
-  outline-offset: 3px;
 }
