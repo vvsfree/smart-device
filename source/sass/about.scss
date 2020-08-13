@@ -27,11 +27,17 @@
     position: absolute;
     top: -560px + $triangle-right-vshift-desktop;
     left: calc(50% - #{$triangle-right-hshift-desktop});
+
     width: 488px;
     height: 560px;
 
     background-image: url("../img/bg-triangle-right-big.svg");
   }
+}
+
+.about__wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .about__img {
@@ -74,7 +80,6 @@
     }
 
     &::after {
-      content: "";
       top: -560px + $triangle-right-vshift-tablet;
       left: calc(50% + #{$triangle-right-hshift-tablet});
     }

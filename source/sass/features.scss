@@ -1,4 +1,5 @@
 .features {
+  position: relative;
   overflow: hidden;
 
   position: relative;
@@ -34,6 +35,7 @@
     position: absolute;
     bottom: -$triangle-right-vshift-desktop;
     left: calc(50% - #{$triangle-right-hshift-desktop});
+
     width: 488px;
     height: 560px;
 
@@ -42,20 +44,20 @@
 }
 
 .features__wrapper {
+  position: relative;
+  z-index: 1;
+
   @media (min-width: $desktop-width) {
     transform: translateX(-2px);
   }
 }
 
 .features__list {
-  position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
   align-content: flex-start;
-  z-index: 1;
 
   margin: 0;
   margin-bottom: -30px;
