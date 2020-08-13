@@ -49,7 +49,7 @@
     В ТЗ этого нет, но на макете это видно
   */
   var desktopWidth = 1024;
-  var aboutTextElement = document.querySelector('.about__text:last-of-type');
+  var aboutTextElement = document.querySelector('.about p:last-of-type');
   if (aboutTextElement) {
     var textOriginal = aboutTextElement.textContent;
     // Реагируем на изменение ширины
@@ -82,7 +82,7 @@
     overlay.classList.add('overlay--visible');
     modal.classList.add('modal--visible');
 
-    modal.querySelector('.form__input:first-of-type').focus();
+    modal.querySelector('.form__label:first-of-type > input').focus();
 
     document.addEventListener('keydown', keydownEscHandler);
 
