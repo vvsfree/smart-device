@@ -671,6 +671,26 @@
       fill: #ffffff; }
     .features__item:hover .features__item-title {
       color: #ffffff; }
+  .features__item h3 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 34px;
+    color: #00b2ff; }
+  .features__item p {
+    margin: 0; }
+  .features__item svg {
+    width: 35px;
+    height: 35px;
+    fill: #00b2ff; }
+  .features__item--stopwatch svg {
+    width: 29px;
+    height: 35px; }
+  .features__item--detective svg {
+    width: 36px;
+    height: 31px; }
 
 .features__icon-placeholder {
   display: -webkit-box;
@@ -685,29 +705,6 @@
   margin-bottom: 22px;
   width: 40px;
   height: 40px; }
-
-.features__icon {
-  width: 35px;
-  height: 35px;
-  fill: #00b2ff; }
-  .features__icon--stopwatch {
-    width: 29px;
-    height: 35px; }
-  .features__icon--detective {
-    width: 36px;
-    height: 31px; }
-
-.features__item-title {
-  margin: 0;
-  margin-bottom: 15px;
-  font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 34px;
-  color: #00b2ff; }
-
-.features__text {
-  margin: 0; }
 
 @media (max-width: 1023px) {
   .features {
@@ -726,19 +723,19 @@
     padding-right: 19px;
     min-height: 232px;
     border-left: 2px solid #00b2ff; }
-  .features__icon-placeholder {
-    margin-bottom: 6px; }
-  .features__icon {
-    width: 33px;
-    height: 33px; }
-    .features__icon--stopwatch {
+    .features__item h3 {
+      margin-bottom: 8px; }
+    .features__item svg {
+      width: 33px;
+      height: 33px; }
+    .features__item--stopwatch svg {
       width: 30px;
       height: 37px; }
-    .features__icon--detective {
+    .features__item--detective svg {
       width: 31px;
       height: 27px; }
-  .features__item-title {
-    margin-bottom: 8px; } }
+  .features__icon-placeholder {
+    margin-bottom: 6px; } }
 
 @media (max-width: 767px) {
   .features {
@@ -759,12 +756,16 @@
     border-left: none;
     -webkit-box-shadow: -2px 0 0 0 #00b2ff;
             box-shadow: -2px 0 0 0 #00b2ff; }
+    .features__item h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 28px; }
     .features__item--hired {
       padding-right: 10px; }
     .features__item--detective {
       padding-top: 13px;
       padding-bottom: 52px; }
-      .features__item--detective .features__item-title {
+      .features__item--detective h3 {
         margin-bottom: -9px; }
     .features__item--tag {
       padding-top: 17px;
@@ -772,11 +773,7 @@
       -webkit-transform: translateX(1px);
               transform: translateX(1px); }
   .features__icon-placeholder {
-    margin-bottom: 11px; }
-  .features__item-title {
-    margin-bottom: 10px;
-    font-size: 20px;
-    line-height: 28px; } }
+    margin-bottom: 11px; } }
 
 .about {
   position: relative;
