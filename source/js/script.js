@@ -35,7 +35,7 @@
     Плавный скроллинг к блоку "Форма"
   */
   var questionButton = document.querySelector('.promo__btn');
-  var formElement = document.querySelector('.form');
+  var formElement = document.querySelector('.advice__form');
   if (questionButton && formElement) {
     questionButton.addEventListener('click', function (e) {
       e.preventDefault();

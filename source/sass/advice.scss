@@ -1,4 +1,4 @@
-.cta {
+.advice {
   padding-top: 91px;
   padding-bottom: 106px;
 
@@ -14,48 +14,48 @@
   background-repeat: no-repeat, no-repeat;
 }
 
-.cta__layout {
+.advice__layout {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.cta__picture {
+.advice__picture {
   margin-top: 70px;
   transform: translateX(-26px);
 }
 
-.cta__img {
+.advice__img {
   width: 100%;
   height: auto;
 }
 
-.cta__form {
+.advice__form {
   flex-shrink: 0;
   width: 585px;
   box-sizing: border-box;
 }
 
 @media (max-width: $desktop-width - 1) {
-  .cta {
+  .advice {
     padding-top: 80px;
     padding-bottom: 104px;
 
     background-image: none;
   }
 
-  .cta__picture {
+  .advice__picture {
     display: none;
   }
 
-  .cta__form {
+  .advice__form {
     width: 100%;
     box-sizing: border-box;
   }
 }
 
 @media (max-width: $tablet-width - 1) {
-  .cta {
+  .advice {
     padding-top: 29px;
     padding-bottom: 41px;
   }

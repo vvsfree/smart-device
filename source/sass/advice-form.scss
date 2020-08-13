@@ -1,4 +1,4 @@
-.cta-form {
+.advice-form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -8,7 +8,7 @@
   padding-left: 13px;
 }
 
-.cta-form__heading {
+.advice-form__heading {
   margin-bottom: 10px;
   width: 100%;
 
@@ -17,12 +17,12 @@
   }
 }
 
-.cta-form__text {
+.advice-form__text {
   margin-bottom: 51px;
   width: 100%;
 }
 
-.cta-form__label {
+.advice-form__label {
   margin-bottom: 40px;
   width: 100%;
 
@@ -31,29 +31,29 @@
   }
 }
 
-.cta-form__layout-column {
+.advice-form__layout-column {
   width: calc((100% - 31px) / 2);
   box-sizing: border-box;
 }
 
-.cta-form__input {
+.advice-form__input {
   padding-top: 13px;
   padding-bottom: 15px;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-.cta-form__area {
+.advice-form__area {
   min-height: 154px;
 }
 
 @media (max-width: $desktop-width - 1) {
-  .cta-form {
+  .advice-form {
     padding-left: 67px;
     padding-right: 62px;
   }
 
-  .cta-form__heading {
+  .advice-form__heading {
     margin-bottom: 16px;
 
     @media (min-width: $tablet-width) {
@@ -61,11 +61,11 @@
     }
   }
 
-  .cta-form__text {
+  .advice-form__text {
     margin-bottom: 54px;
   }
 
-  .cta-form__label {
+  .advice-form__label {
     margin-bottom: 44px;
 
     &--area {
@@ -73,17 +73,17 @@
     }
   }
 
-  .cta-form__area {
+  .advice-form__area {
     min-height: 158px;
   }
 
-  .cta-form__layout-column {
+  .advice-form__layout-column {
     width: calc((100% - 33px) / 2);
   }
 }
 
 @media (max-width: $tablet-width - 1) {
-  .cta-form {
+  .advice-form {
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -92,36 +92,36 @@
     padding: 0;
   }
 
-  .cta-form__heading {
+  .advice-form__heading {
     margin-bottom: 12px;
   }
 
-  .cta-form__text {
+  .advice-form__text {
     margin-bottom: 27px;
   }
 
-  .cta-form__label,
-  .cta-form__layout-column {
+  .advice-form__label,
+  .advice-form__layout-column {
     margin-bottom: 32px;
   }
 
-  .cta-form__label--area {
+  .advice-form__label--area {
     margin-bottom: 30px;
   }
 
-  .cta-form__area {
+  .advice-form__area {
     min-height: 104px;
   }
 
-  .cta-form__layout-column {
+  .advice-form__layout-column {
     width: auto;
   }
 
-  .cta-form__btn {
+  .advice-form__btn {
     margin-bottom: 23px;
   }
 
-  .cta-form__checkbox {
+  .advice-form__checkbox {
     transform: translateX(-8px);
   }
 }
