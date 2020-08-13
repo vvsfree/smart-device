@@ -10,7 +10,6 @@
   line-height: 34px;
   color: $white-color;
 
-  // background-color: $dark-gray-color;
   background-image: url("../img/bg-triangles.svg");
   background-position: top left calc(50% + 405px);
   background-repeat: no-repeat;
@@ -97,13 +96,18 @@
   text-decoration: none;
 }
 
-.promo__img {
+.promo__picture {
   position: absolute;
   top: 140px;
   left: calc(50% + 78px);
 
   width: 705px;
   height: 515px;
+}
+
+.promo__img {
+  width: auto;
+  height: 100%;
 }
 
 @media (max-width: $desktop-width - 1) {
@@ -155,12 +159,16 @@
     display: none;
   }
 
-  .promo__img {
+  .promo__picture {
     top: 31px;
     left: auto;
     right: 0;
+
     width: 260px;
+    // width: 465px;
     height: 340px;
+    // object-fit: contain;
+    // object-position: left top;
   }
 }
 
@@ -219,7 +227,7 @@
     }
   }
 
-  .promo__img {
+  .promo__picture {
     top: 22px;
     width: 294px;
     height: 220px;

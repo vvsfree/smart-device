@@ -497,12 +497,16 @@
   opacity: 0.5;
   text-decoration: none; }
 
-.promo__img {
+.promo__picture {
   position: absolute;
   top: 140px;
   left: calc(50% + 78px);
   width: 705px;
   height: 515px; }
+
+.promo__img {
+  width: auto;
+  height: 100%; }
 
 @media (max-width: 1023px) {
   .promo {
@@ -537,7 +541,7 @@
     min-width: 379px; }
   .promo__link {
     display: none; }
-  .promo__img {
+  .promo__picture {
     top: 31px;
     left: auto;
     right: 0;
@@ -582,7 +586,7 @@
     display: none; }
     .promo__btn-text--alternate {
       display: inline; }
-  .promo__img {
+  .promo__picture {
     top: 22px;
     width: 294px;
     height: 220px; } }
