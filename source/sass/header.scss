@@ -4,16 +4,20 @@
   color: $white-color;
   background-color: $dark-gray-color;
   background-image: url("../img/bg-header-desktop@1x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-header-desktop@2x.png");
   }
 }
 
-.header__top {
+.header__wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  margin-bottom: 33px;
 
   @media (min-width: $desktop-width) {
     transform: translateX(-2px);
@@ -85,8 +89,10 @@
     }
   }
 
-  .header__top {
+  .header__wrapper {
     align-items: flex-start;
+
+    margin-bottom: 10px;
   }
 
   .header__contacts {
@@ -130,6 +136,10 @@
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-header-mobile@2x.png");
     }
+  }
+
+  .header__wrapper {
+    margin-bottom: 15px;
   }
 
   .header__logo {

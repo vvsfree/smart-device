@@ -3,26 +3,22 @@
   overflow-x: hidden;
 
   padding-top: 198px;
-  padding-bottom: 275px;
+  padding-bottom: 275px - 33px;
 
   font-family: $font-mono;
   font-size: 22px;
   line-height: 34px;
   color: $white-color;
 
-  background-color: $dark-gray-color;
-  background-image: url("../img/bg-triangles.svg"), url("../img/bg-header-desktop@1x.png");
-  background-position: top left calc(50% + 405px), top -118px left;
-  background-repeat: no-repeat, repeat;
-  background-size: 671px 641px, auto;
-
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-triangles.svg"), url("../img/bg-header-desktop@2x.png");
-  }
+  // background-color: $dark-gray-color;
+  background-image: url("../img/bg-triangles.svg");
+  background-position: top left calc(50% + 405px);
+  background-repeat: no-repeat;
+  background-size: 671px 641px;
 }
 
 // Перекрыть абсолютно спозиционированную картинку
-.promo__layout {
+.promo__wrapper {
   position: relative;
   z-index: 1;
 
@@ -70,9 +66,13 @@
 }
 
 .promo__btn {
+  display: inline-block;
+  vertical-align: middle;
+
   margin-left: 98px;
   padding: 18px 28px 18px 28px;
-  max-width: 407px;
+
+  min-width: 407px;
   box-sizing: border-box;
 
   font-size: 16px;
@@ -109,7 +109,7 @@
 @media (max-width: $desktop-width - 1) {
   .promo {
     padding-top: 106px;
-    padding-bottom: 163px;
+    padding-bottom: 163px - 10px;
 
     font-size: 18px;
     line-height: 28px;
@@ -148,7 +148,7 @@
 
   .promo__btn {
     margin-left: 114px;
-    max-width: 379px;
+    min-width: 379px;
   }
 
   .promo__link {
@@ -167,7 +167,7 @@
 @media (max-width: $tablet-width - 1) {
   .promo {
     padding-top: 216px;
-    padding-bottom: 70px;
+    padding-bottom: 70px - 15px;
 
     font-size: 16px;
     line-height: 25px;
@@ -206,7 +206,9 @@
   }
 
   .promo__btn {
-    max-width: 100%;
+    display: block;
+    width: 100%;
+    min-width: auto;
   }
 
   .promo__btn-text {
