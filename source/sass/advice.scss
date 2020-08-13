@@ -14,25 +14,29 @@
   background-repeat: no-repeat, no-repeat;
 }
 
-.advice__layout {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+.advice__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
 
-.advice__picture {
-  margin-top: 70px;
-  transform: translateX(-26px);
-}
+    background-image: url("../img/bg-airplane@1x.png");
+    background-position: top 70px left 120px;
+    background-size: 511px 288px;
+    background-repeat: no-repeat;
 
-.advice__img {
-  width: 100%;
-  height: auto;
+    @media (max-width: 1461px) {
+      background-size: calc(100% - 571px - 147px - 144px) auto;
+    }
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-airplane@2x.png");
+    }
+  }
 }
 
 .advice__form {
-  flex-shrink: 0;
-  width: 585px;
+  width: 571px;
   box-sizing: border-box;
 }
 

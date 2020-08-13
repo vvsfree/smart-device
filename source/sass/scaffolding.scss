@@ -13,16 +13,14 @@
 
 .wrapper {
   margin: 0 auto;
-  padding: 0;
-  padding-left: 25px;
-  padding-right: 25px;
-  max-width: 1411px;
+  padding: 0 $wrapper-padding;
+  max-width: $max-content-width;
 
   &--narrow {
     @media (min-width: $desktop-width) {
-      padding-left: 25px + 122px;
-      padding-right: 25px  + 119px;
-      max-width: 1411px - 122px - 119px;
+      padding-left: $wrapper-padding + 122px;
+      padding-right: $wrapper-padding  + 119px;
+      max-width: $max-content-width - 122px - 119px;
     }
   }
 }

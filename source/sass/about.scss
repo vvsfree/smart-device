@@ -38,16 +38,22 @@
 .about__wrapper {
   position: relative;
   z-index: 1;
-}
 
-.about__img {
-  float: left;
-  transform: translate(-32px, 5px);
+  @media (min-width: $tablet-width) {
+    padding-left: $wrapper-padding + 300px;
 
-  margin-right: -42px;
+    max-width: $max-content-width - 300px - 119px;
+    min-height: 320px;
 
-  width: 220px;
-  height: 320px;
+    background-image: url("../img/bg-2005-desktop@1x.png");
+    background-position: top 5px left 115px;
+    background-size: 220px 320px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-2005-desktop@2x.png");
+    }
+  }
 }
 
 .about__title {
@@ -86,12 +92,21 @@
     }
   }
 
-  .about__img {
-    margin-right: -57px;
-    transform: translate(-25px, -2px);
+  .about__wrapper {
+    @media (min-width: $tablet-width) {
+      padding-left: $wrapper-padding + 188px;
 
-    width: 244px;
-    height: 362px;
+      min-height: 362px;
+
+      background-image: url("../img/bg-2005-tablet@1x.png");
+      background-position: top -2px left;
+      background-size: 244px 362px;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-2005-tablet@2x.png");
+      }
+    }
   }
 
   .about__title {
