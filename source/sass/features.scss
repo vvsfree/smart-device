@@ -81,20 +81,6 @@
   border: 1px solid $dim-gray-color;
   border-left: 3px solid $blue-color;
 
-  &:hover {
-    color: $white-color;
-    background-color: $blue-color;
-    border-color: transparent;
-
-    .features__icon {
-      fill: $white-color;
-    }
-
-    .features__item-title {
-      color: $white-color;
-    }
-  }
-
   h3 {
     margin: 0;
     margin-bottom: 15px;
@@ -129,6 +115,20 @@
     svg {
       width: 36px;
       height: 31px;
+    }
+  }
+
+  &:hover {
+    color: $white-color;
+    background-color: $blue-color;
+    border-color: transparent;
+
+    h3 {
+      color: $white-color;
+    }
+
+    svg {
+      fill: $white-color;
     }
   }
 }

@@ -662,14 +662,6 @@
   background-color: #ffffff;
   border: 1px solid #ebebeb;
   border-left: 3px solid #00b2ff; }
-  .features__item:hover {
-    color: #ffffff;
-    background-color: #00b2ff;
-    border-color: transparent; }
-    .features__item:hover .features__icon {
-      fill: #ffffff; }
-    .features__item:hover .features__item-title {
-      color: #ffffff; }
   .features__item h3 {
     margin: 0;
     margin-bottom: 15px;
@@ -690,6 +682,14 @@
   .features__item--detective svg {
     width: 36px;
     height: 31px; }
+  .features__item:hover {
+    color: #ffffff;
+    background-color: #00b2ff;
+    border-color: transparent; }
+    .features__item:hover h3 {
+      color: #ffffff; }
+    .features__item:hover svg {
+      fill: #ffffff; }
 
 .features__icon-placeholder {
   display: -webkit-box;
