@@ -44,6 +44,9 @@
 
     background-color: rgba($white-color, 0.1);
     border: none;
+    border-radius: 0;
+
+    appearance: none;
 
     &::placeholder {
       color: $white-color;

@@ -9,14 +9,16 @@ $dim-gray-color: #ebebeb;
 $dark-gray-color: #1b2d37;
 $blue-color: #00b2ff;
 
+$wrapper-padding: 25px;
 $max-content-width: 1411px;
+// В наименовании используется нижнее подчеркивание потому что переменная входит в конструкцию
+// типа calc(100vh - #{$max_wrapper_width})
+// Если использовать обычное тире, то ругается линтер и сборщик
+$max_wrapper_width: $max-content-width + 2 * $wrapper-padding;
 
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
-
-$wrapper-padding: 25px;
-
 
 $triangle_left_vshift_desktop: 366px;
 $triangle_right_hshift_desktop: 129px;

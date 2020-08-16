@@ -73,7 +73,10 @@
   color: inherit;
   background-color: transparent;
   border-radius: 5px;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
   .btn--white {
     color: #ffffff;
     border: 1px solid #ffffff; }
@@ -1183,7 +1186,11 @@
   line-height: 22px;
   color: inherit;
   background-color: rgba(255, 255, 255, 0.1);
-  border: none; }
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
   .form__label input::-webkit-input-placeholder,
   .form__label textarea::-webkit-input-placeholder {
     color: #ffffff; }

@@ -25,7 +25,7 @@
     background-size: 511px 288px;
     background-repeat: no-repeat;
 
-    @media (max-width: 1461px) {
+    @media (max-width: $max_wrapper_width) {
       background-size: calc(100% - 571px - 147px - 144px) auto;
     }
 
