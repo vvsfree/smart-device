@@ -17,6 +17,14 @@
 
     font-size: 14px;
     line-height: 16px;
+
+    cursor: pointer;
+
+    &:hover {
+      .form__box {
+        box-shadow: inset 0 0 0 1px $white-color;
+      }
+    }
   }
 
   input,
@@ -47,7 +55,15 @@
     }
 
     &:invalid {
-      box-shadow: 0 0 0 3px red;
+      box-shadow: inset 0 0 0 2px red;
+    }
+
+    &:focus {
+      @include focus();
+    }
+
+    &:hover {
+      box-shadow: inset 0 0 0 2px $white-color;
     }
   }
 
@@ -66,8 +82,7 @@
   }
 
   input[type="checkbox"]:focus + .form__box {
-    outline: 1px dashed black;
-    outline-offset: 3px;
+    @include focus();
   }
 }
 

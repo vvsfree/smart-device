@@ -21,14 +21,17 @@
   <header class="header">
     <h1 class="visually-hidden">Компания «SD Service Devices»</h1>
     <div class="wrapper header__wrapper">
-      <picture>
-        <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
-        <img class="header__logo" src="img/logo.svg" width="202" height="52" alt="Логотип сайта">
-      </picture>
+
+      <a class="header__logo">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/logo-mobile.svg">
+          <img class="header__logo-img" src="img/logo.svg" width="202" height="52" alt="Логотип сайта">
+        </picture>
+      </a>
 
       <ul class="header__contacts">
         <li class="header__contact-item">
-          <a class="header__link" href="mailto:info@sd.ru">
+          <a class="link header__link" href="mailto:info@sd.ru">
             <svg class="header__link-icon header__link-icon--envelope" width="19" height="14" aria-hidden="true"
               focusable="false">
               <use xlink:href="#icon-envelope"></use>
@@ -37,7 +40,7 @@
           </a>
         </li>
         <li class="header__contact-item">
-          <a class="header__link" href="tel:+74950005252">
+          <a class="link header__link" href="tel:+74950005252">
             <svg class="header__link-icon header__link-icon--phone" width="18" height="18" aria-hidden="true"
               focusable="false">
               <use xlink:href="#icon-phone"></use>
@@ -57,7 +60,7 @@
           <span class="promo__btn-text">Получить бесплатную консультацию</span>
           <span class="promo__btn-text promo__btn-text--alternate">Бесплатная консультация</span>
         </a>
-        <a class="promo__link" href="#features">Скролл вниз</a>
+        <a class="link promo__link" href="#features">Скролл вниз</a>
       </div>
       <div class="promo__picture">
         <picture>
@@ -132,7 +135,7 @@
         <h2 class="heading goods__title">Service Device предлагает следующие товары и услуги</h2>
         <ul class="goods__list">
           <li class="goods__item">
-            <a class="goods__link goods__link--prod" href="#">
+            <a class="link goods__link goods__link--prod" href="#">
               Производство<br>печатных плат
               <svg class="goods__link-icon" width="6" height="9" aria-hidden="true" focusable="false">
                 <use xlink:href="#icon-arrow-right"></use>
@@ -140,7 +143,7 @@
             </a>
           </li>
           <li class="goods__item">
-            <a class="goods__link goods__link--assembly" href="#">
+            <a class="link goods__link goods__link--assembly" href="#">
               Монтаж печатных<br>плат
               <svg class="goods__link-icon" width="6" height="9" aria-hidden="true" focusable="false">
                 <use xlink:href="#icon-arrow-right"></use>
@@ -148,7 +151,7 @@
             </a>
           </li>
           <li class="goods__item">
-            <a class="goods__link goods__link--parts" href="#">
+            <a class="link goods__link goods__link--parts" href="#">
               Комплектующие<br>для светотехники
               <svg class="goods__link-icon" width="6" height="9" aria-hidden="true" focusable="false">
                 <use xlink:href="#icon-arrow-right"></use>
@@ -223,7 +226,7 @@
     </div>
     <section class="site-nav footer__nav accordion accordion--expanded">
       <div class="wrapper">
-        <h2 class="footer__title">
+        <h2 class="footer__title  accordion__control">
           Разделы сайта
           <button class="accordion__btn" type="button">
             <svg class="accordion__btn-icon" width="16" height="16" aria-hidden="true" focusable="false">
@@ -233,19 +236,19 @@
           </button>
         </h2>
         <ul class="site-nav__list footer__content accordion__content">
-          <li class="site-nav__item"><a class="site-nav__link" href="#">О компании</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#">Продукты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#">Производство печатных плат</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#">Монтаж печатных плат</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#">Комплектующие</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#">Доставка</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#">Контакты</a></li>
+          <li class="site-nav__item"><a class="link site-nav__link" href="#">О компании</a></li>
+          <li class="site-nav__item"><a class="link site-nav__link" href="#">Продукты</a></li>
+          <li class="site-nav__item"><a class="link site-nav__link" href="#">Производство печатных плат</a></li>
+          <li class="site-nav__item"><a class="link site-nav__link" href="#">Монтаж печатных плат</a></li>
+          <li class="site-nav__item"><a class="link site-nav__link" href="#">Комплектующие</a></li>
+          <li class="site-nav__item"><a class="link site-nav__link" href="#">Доставка</a></li>
+          <li class="site-nav__item"><a class="link site-nav__link" href="#">Контакты</a></li>
         </ul>
       </div>
     </section>
     <section class="footer__contacts accordion accordion--expanded">
       <div class="wrapper">
-        <h2 class="footer__title">
+        <h2 class="footer__title accordion__control">
           Наш офис
           <button class="accordion__btn" type="button">
             <svg class="accordion__btn-icon" width="16" height="16" aria-hidden="true" focusable="false">
@@ -259,9 +262,9 @@
             г. Мытищи, Олимпийский проспект, д.10
           </p>
           <ul class="footer__phones">
-            <li><a class="footer__phone" href="tel:+74955894050">+7 (495) 589-40-50</a></li>
-            <li><a class="footer__phone" href="tel:+79250038767">+7 (925) 003-87-67</a></li>
-            <li><a class="footer__phone" href="tel:+792692608079">+7 (926) 926-080-79</a></li>
+            <li><a class="link footer__phone" href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+            <li><a class="link footer__phone" href="tel:+79250038767">+7 (925) 003-87-67</a></li>
+            <li><a class="link footer__phone" href="tel:+792692608079">+7 (926) 926-080-79</a></li>
           </ul>
         </address>
       </div>
@@ -271,8 +274,8 @@
       <div class="wrapper copyright__layout">
         <p class="copyright__statement">Все права защищены</p>
         <p class="copyright__holder">1999-2018 SD Service Devices</p>
-        <a class="copyright__policy" href="#">Условия конфиденциальности</a>
-        <a class="copyright__developer" href="#">Developed by WOW Studio</a>
+        <a class="link copyright__policy" href="#">Условия конфиденциальности</a>
+        <a class="link copyright__developer" href="#">Developed by WOW Studio</a>
       </div>
     </section>
   </footer>

@@ -39,3 +39,21 @@
   font-size: 28px;
   line-height: 40px;
 }
+
+@mixin hover() {
+  opacity: 0.7;
+}
+
+@mixin active() {
+  opacity: 0.3;
+}
+
+@mixin scale() {
+  transition: transform 0.1s linear;
+  transform: scale(1.1);
+}
+
+@mixin focus {
+  outline: 2px solid orange;
+  outline-offset: 3px;
+}

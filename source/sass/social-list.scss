@@ -14,3 +14,14 @@
     margin-left: 16px;
   }
 }
+
+.social-list__icon {
+  &:hover {
+    @include scale();
+    @include hover();
+  }
+
+  &:active {
+    @include active();
+  }
+}

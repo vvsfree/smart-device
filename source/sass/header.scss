@@ -28,6 +28,12 @@
   display: block;
 }
 
+.header__logo-img {
+  display: block;
+  width: 202px;
+  height: 52px;
+}
+
 .header__contacts {
   display: flex;
   align-items: center;
@@ -55,6 +61,12 @@
 
   color: inherit;
   text-decoration: none;
+
+  &:hover {
+    .header__link-icon {
+      @include scale();
+    }
+  }
 }
 
 .header__link-icon {
@@ -142,7 +154,7 @@
     margin-bottom: 15px;
   }
 
-  .header__logo {
+  .header__logo-img {
     width: 38px;
     height: 38px;
   }

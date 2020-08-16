@@ -1,0 +1,9 @@
+.link {
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    @include active();
+  }
+}

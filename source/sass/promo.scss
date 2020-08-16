@@ -118,12 +118,12 @@
     font-size: 18px;
     line-height: 28px;
 
-    background-image: url("../img/bg-triangles.svg"), url("../img/bg-header-tablet@1x.png");
-    background-position: top -122px right -201px, top -82px left;
-    background-size: 529px 506px, auto;
+    background-image: url("../img/bg-triangles.svg");
+    background-position: top -122px right -201px;
+    background-size: 529px 506px;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-triangles.svg"), url("../img/bg-header-tablet@2x.png");
+      background-image: url("../img/bg-triangles.svg");
     }
   }
 
@@ -165,10 +165,7 @@
     right: 0;
 
     width: 260px;
-    // width: 465px;
     height: 340px;
-    // object-fit: contain;
-    // object-position: left top;
   }
 }
 
@@ -180,12 +177,12 @@
     font-size: 16px;
     line-height: 25px;
 
-    background-image: url("../img/bg-triangles.svg"), url("../img/bg-header-mobile@1x.png");
-    background-position: top -115px right -337px, top -70px left;
-    background-size: 505px 481px, auto;
+    background-image: url("../img/bg-triangles.svg");
+    background-position: top -115px right -337px;
+    background-size: 505px 481px;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-triangles.svg"), url("../img/bg-header-mobile@2x.png");
+      background-image: url("../img/bg-triangles.svg");
     }
   }
 

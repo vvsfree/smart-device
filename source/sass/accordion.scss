@@ -5,6 +5,8 @@
 .accordion__btn-icon {
   width: 16px;
   height: 16px;
+
+  fill: #c4c4c4;
 }
 
 .accordion__use-icon-minus {
@@ -33,6 +35,20 @@
     }
   }
 
+  .accordion__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:hover {
+      .accordion__btn-icon {
+        fill: black;
+      }
+    }
+  }
+
   .accordion__btn {
     display: flex;
     justify-content: center;
@@ -50,8 +66,6 @@
 
     background-color: transparent;
     border: none;
-
-    cursor: pointer;
   }
 
   .accordion__content {

@@ -1,17 +1,34 @@
 'use strict';
+
+/**
+ * Разбил на несколько модулей IIFE для удобства
+ * Если необходимо, будет легко разбить на несколько JS файлов
+ */
+
 (function () {
 
   /*
     Блок "Подвал сайта"
     Секции "Разделы сайта" и "Наш офис" должны скрываться на мобильной ширине
   */
+
+  var EXPANDED_PANEL_CLASS_NAME = 'accordion--expanded';
+
   var accordionNodeList = document.querySelectorAll('.accordion');
   if (accordionNodeList) {
     var accordionArray = Array.prototype.slice.call(accordionNodeList);
     accordionArray.forEach(function (item) {
-      item.classList.remove('accordion--expanded');
-      item.addEventListener('click', function () {
-        item.classList.toggle('accordion--expanded');
+      item.classList.remove(EXPANDED_PANEL_CLASS_NAME);
+
+      item.querySelector('.accordion__control').addEventListener('click', function () {
+        if (!item.classList.contains(EXPANDED_PANEL_CLASS_NAME)) {
+          // Открываем панель и перед этим закрываем уже открытую
+          var expandedPanel = document.querySelector('.' + EXPANDED_PANEL_CLASS_NAME);
+          if (expandedPanel) {
+            expandedPanel.classList.remove(EXPANDED_PANEL_CLASS_NAME);
+          }
+        }
+        item.classList.toggle(EXPANDED_PANEL_CLASS_NAME);
       });
     });
   }
@@ -68,7 +85,9 @@
     mediaDesktop.addListener(handleWidthChange);
     handleWidthChange(mediaDesktop);
   }
+})();
 
+(function () {
   /*
     Модальное окно обратной связи
   */
@@ -89,9 +108,6 @@
     callForm.customer.value = getItem('customer');
     callForm.phone.value = getItem('phone');
     callForm.question.value = getItem('question');
-    callForm.agreement.checked = getItem('agreement');
-
-    origValue = callForm.phone.value;
   }
 
   function closeModal() {
@@ -99,6 +115,10 @@
     overlay.classList.remove('overlay--visible');
     modal.classList.remove('modal--visible');
     document.removeEventListener('keydown', keydownEscHandler);
+
+    localStorage.setItem('customer', callForm.customer.value);
+    localStorage.setItem('phone', callForm.phone.value);
+    localStorage.setItem('question', callForm.question.value);
   }
 
   function keydownEscHandler(evt) {
@@ -113,12 +133,9 @@
   var overlay = document.querySelector('.overlay');
   var modal = document.querySelector('.modal');
   var callForm = document.forms.call;
-
   var callButton = document.querySelector('.header__btn');
 
-  var origValue;
-
-  if (overlay && modal && callButton) {
+  if (overlay && modal && callButton && callForm) {
     overlay.addEventListener('click', function () {
       closeModal();
     });
@@ -127,54 +144,79 @@
       closeModal();
     });
 
-    modal.querySelector('.call-form__send-btn').addEventListener('click', function (evt) {
-      callForm.phone.setCustomValidity('');
-
-      if (/^\+7\(\d{3}\)\d{7}$/.test(callForm.phone.value) === false) {
-        callForm.phone.setCustomValidity('Phone format mask is +7(123)1234567');
-        return;
-      }
-
-      evt.preventDefault();
-
-      localStorage.setItem('customer', callForm.customer.value);
-      localStorage.setItem('phone', callForm.phone.value);
-      localStorage.setItem('question', callForm.question.value);
-      localStorage.setItem('agreement', callForm.agreement.checked);
-
-      closeModal();
-    });
-
     callButton.addEventListener('click', function (evt) {
       evt.preventDefault();
       openModal();
     });
+
+    callForm.addEventListener('submit', function () {
+      closeModal();
+    });
+  }
+})();
+
+(function () {
+  /*
+    Настройка форм обратной связи
+  */
+  function set(form) {
+    var origValue;
+
+    form.phone.addEventListener('focus', function (evt) {
+      // Если поле пустое, добавим начало номера
+      if (!evt.target.value) {
+        evt.target.value = '+7(';
+      }
+      origValue = evt.target.value;
+    });
+
+    form.phone.addEventListener('input', function (evt) {
+      var value = evt.target.value;
+
+      // Нужно закрыть скобку?
+      var check = /^\+7\(\d{3}$/.test(value);
+      if (check) {
+        evt.target.value = value + ')';
+      }
+
+      // То что в поле ввода может быть частью телефона?
+      check = /^\+7\(\d{0,3}(\)\d{0,7})?$/.test(value);
+      if (check) {
+        origValue = evt.target.value;
+      } else {
+        evt.target.value = origValue;
+      }
+    });
+
+    form.querySelector('.btn').addEventListener('click', function () {
+      validate(form);
+    });
+
+    form.addEventListener('change', function () {
+      validate(form);
+    });
   }
 
-  callForm.phone.addEventListener('focus', function (evt) {
-    // Если поле пустое, добавим начало номера
-    if (!evt.target.value) {
-      evt.target.value = '+7(';
-      origValue = evt.target.value;
-    }
-  });
+  function validate(form) {
+    form.customer.setCustomValidity('');
+    form.phone.setCustomValidity('');
+    form.agreement.setCustomValidity('');
 
-  callForm.phone.addEventListener('input', function (evt) {
-    callForm.phone.setCustomValidity('');
-    var value = evt.target.value;
-
-    // Нужно закрыть скобку?
-    var check = /^\+7\(\d{3}$/.test(value);
-    if (check) {
-      evt.target.value = value + ')';
+    if (!form.customer.value) {
+      form.customer.setCustomValidity('Необходимо заполнить имя');
     }
 
-    // То что в поле ввода может быть частью телефона?
-    check = /^\+7\(\d{0,3}(\)\d{0,7})?$/.test(value);
-    if (check) {
-      origValue = evt.target.value;
-    } else {
-      evt.target.value = origValue;
+    if (/^\+7\(\d{3}\)\d{7}$/.test(form.phone.value) === false) {
+      form.phone.setCustomValidity('Формат номера телефона должен быть +7(123)1234567');
     }
-  });
+
+    if (!form.agreement.checked) {
+      form.agreement.setCustomValidity('Необходимо Ваше согласие на обработку персональных данных');
+    }
+  }
+
+  var forms = document.querySelectorAll('.form');
+  for (var i = 0; i < forms.length; i++) {
+    set(document.forms[i]);
+  }
 })();
