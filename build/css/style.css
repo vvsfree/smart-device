@@ -808,13 +808,9 @@
     .features__item--detective {
       padding-top: 13px;
       padding-bottom: 52px; }
-      .features__item--detective h3 {
-        margin-bottom: -9px; }
     .features__item--tag {
       padding-top: 17px;
-      padding-bottom: 26px;
-      -webkit-transform: translateX(1px);
-              transform: translateX(1px); }
+      padding-bottom: 26px; }
   .features__icon-placeholder {
     margin-bottom: 11px; } }
 
